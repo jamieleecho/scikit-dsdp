@@ -27,8 +27,8 @@ jobs:
       - name:  Install requirements (Linux)
         if: matrix.os == 'ubuntu-latest'
         run: |
-          apt-get update -y
-          apt-get install -y libblas-dev liblapack-dev
+          sudo apt-get update -y
+          sudo apt-get install -y libblas-dev liblapack-dev
         shell: bash
 
       - name: Install uv

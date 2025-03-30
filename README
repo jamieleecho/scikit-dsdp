@@ -92,3 +92,17 @@ The Makefile makes it easy to perform the most common operations:
 * make sync syncs the python environment with uv.lock
 
 .vscode/settings.json is set so that unit tests can be run without further configuration.
+
+
+Releasing
+============
+
+If you have sufficient permissions, you will be able to make new releases that are published to
+https://pypi.org/project/scikit-dsdp/
+
+
+Releases are made from the main branch.
+1. Select Run workflow from https://github.com/zhisu/scikit-dsdp/actions/workflows/bump-version.yml
+2. Be sure that the main branch is selected and press Run workflow
+3. This will automatically create a new tag and publish to pypi
+4. A new release will be present https://github.com/zhisu/scikit-dsdp/releases that you can then fill out and publish.

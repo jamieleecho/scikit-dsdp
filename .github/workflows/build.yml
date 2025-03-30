@@ -12,10 +12,10 @@ jobs:
           sudo apt-get update -y
           sudo apt-get install -y libblas-dev liblapack-dev
 
+      - uses: actions/checkout@master
+
       - name: Install uv
         uses: astral-sh/setup-uv@v5
-
-      - uses: actions/checkout@master
 
       - name: Check linting, formatting
         run: |
@@ -35,10 +35,10 @@ jobs:
           sudo apt-get update -y
           sudo apt-get install -y libblas-dev liblapack-dev
 
+      - uses: actions/checkout@master
+
       - name: Install uv
         uses: astral-sh/setup-uv@v5
-
-      - uses: actions/checkout@master
 
       - name: Set up Python
         run: |

@@ -26,7 +26,7 @@ jobs:
     strategy:
       matrix:
         os: [windows-latest] # os: [ubuntu-latest, macos-latest]
-        python-version: ['3.9', '3.10', '3.13']
+        python-version: ['3.9'] # ['3.9', '3.10', '3.13']
     steps:
       - name:  Install requirements (Linux)
         if: matrix.os == 'ubuntu-latest'
@@ -37,9 +37,9 @@ jobs:
       - name:  Install requirements (Windows)
         if: matrix.os == 'windows-latest'
         run: |
-          curl -L -o blas.lib https://icl.utk.edu/lapack-for-windows/libraries/VisualStudio/3.5.0/Static-INTEL/Win64/BLAS.lib
-          curl -L -o lapack.lib https://icl.utk.edu/lapack-for-windows/libraries/VisualStudio/3.5.0/Static-INTEL/Win64/LAPACK.lib
-          echo "LIB=$(pwd)" >> $GITHUB_PATH
+          curl -L -o blas.lib https://icl.utk.edu/lapack-for-windows/libraries/VisualStudio/3.5.0/Static-INTEL/Win64/BLAS.lib;
+          curl -L -o lapack.lib https://icl.utk.edu/lapack-for-windows/libraries/VisualStudio/3.5.0/Static-INTEL/Win64/LAPACK.lib;
+          echo "LIB=$(pwd)" >> $GITHUB_PATH;
 
       - uses: actions/checkout@master
 

@@ -24,6 +24,12 @@ jobs:
         python-version: ['3.9', '3.10', '3.13']
 
     steps:
+      - name:  Install requirements (Linux)
+        if: matrix.os == 'ubuntu-latest'
+        run: |
+          apt-get install -y libblas-dev liblapack-dev
+        shell: bash
+
       - name: Install uv
         uses: astral-sh/setup-uv@v5
 

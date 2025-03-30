@@ -41,6 +41,7 @@ jobs:
           curl -L -o lapack.lib https://icl.utk.edu/lapack-for-windows/libraries/VisualStudio/3.5.0/Static-INTEL/Win64/LAPACK.lib;
           echo "LIB=$PWD" | Out-File -FilePath $Env:GITHUB_ENV -Encoding utf8 -Append
           echo "LIBPATH=$PWD" | Out-File -FilePath $Env:GITHUB_ENV -Encoding utf8 -Append
+          dir
 
       - uses: actions/checkout@master
 
@@ -59,6 +60,7 @@ jobs:
 
       - name: Verify the distribution can be built
         run: |
+          env
           make build-dist
 
       - name: Run tests

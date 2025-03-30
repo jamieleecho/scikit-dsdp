@@ -18,6 +18,7 @@
 default: check-all run-tests
 
 build-dist:
+    env
 	uv build
 
 check-all: check-lint check-lock

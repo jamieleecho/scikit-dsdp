@@ -39,9 +39,8 @@ jobs:
         run: |
           curl -L -o blas.lib https://icl.utk.edu/lapack-for-windows/libraries/VisualStudio/3.5.0/Static-INTEL/Win64/BLAS.lib;
           curl -L -o lapack.lib https://icl.utk.edu/lapack-for-windows/libraries/VisualStudio/3.5.0/Static-INTEL/Win64/LAPACK.lib;
-          echo $Env:GITHUB_ENV
           echo "LIB=$PWD" | Out-File -FilePath $Env:GITHUB_ENV -Encoding utf8 -Append
-          echo "LIB=$PWD"
+          echo "LIBPATH=$PWD" | Out-File -FilePath $Env:GITHUB_ENV -Encoding utf8 -Append
 
       - uses: actions/checkout@master
 
@@ -56,12 +55,10 @@ jobs:
 
       - name: Install Requirements
         run: |
-          env
           make sync
 
       - name: Verify the distribution can be built
         run: |
-          env
           make build-dist
 
       - name: Run tests

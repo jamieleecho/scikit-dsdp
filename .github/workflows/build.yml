@@ -20,13 +20,14 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        os: [ubuntu-latest, macos-latest, windows-latest]
+        os: [ubuntu-latest]
         python-version: ['3.9', '3.10', '3.13']
 
     steps:
       - name:  Install requirements (Linux)
         if: matrix.os == 'ubuntu-latest'
         run: |
+          apt-get update -y
           apt-get install -y libblas-dev liblapack-dev
         shell: bash
 

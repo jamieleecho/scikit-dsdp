@@ -25,15 +25,22 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        os: [ubuntu-latest, macos-latest]
+        os: [windows-latest] # os: [ubuntu-latest, macos-latest]
         python-version: ['3.9', '3.10', '3.13']
-
     steps:
       - name:  Install requirements (Linux)
         if: matrix.os == 'ubuntu-latest'
         run: |
           sudo apt-get update -y
           sudo apt-get install -y libblas-dev liblapack-dev
+
+      - name:  Install requirements (Windows)
+        if: matrix.os == 'windows-latest'
+        run: |
+          curl -L -o openblas.zip https://github.com/OpenMathLib/OpenBLAS/releases/download/v0.3.23/openblas-0.3.23-win64.zip
+          7z x openblas.zip -oopenblas
+          echo "OPENBLAS_PATH=$(pwd)/openblas" >> $GITHUB_ENV
+          echo "PATH=$(pwd)/openblas/lib;$PATH" >> $GITHUB_PATH
 
       - uses: actions/checkout@master
 

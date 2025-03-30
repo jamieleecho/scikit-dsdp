@@ -24,13 +24,13 @@ Issues = "https://github.com/zhisu/scikit-dsdp/issues"
 dev = [
   "pytest",
   "pre-commit",
+  "ruff",
 ]
 
 [build-system]
 requires = [
   "cython>=0.29.21",
   "numpy>=1.19.0",
-  "ruff",
   "setuptools",
   "scipy",
   "wheel",

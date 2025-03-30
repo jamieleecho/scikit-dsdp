@@ -1,7 +1,3 @@
-try:
-    import setuptools
-except ImportError:
-    pass
 from distutils.core import setup, Extension
 from glob import glob
 import os
@@ -30,7 +26,7 @@ DSDP_INC_DIR = "dsdp/C/allinclude"
 
 
 BLAS_NOUNDERSCORES = (
-    int(os.environ.get("DSDP_BLAS_NOUNDERSCORES", BLAS_NOUNDERSCORES)) == True
+    int(os.environ.get("DSDP_BLAS_NOUNDERSCORES", BLAS_NOUNDERSCORES)) is True
 )
 BLAS_LIB = os.environ.get("DSDP_BLAS_LIB", BLAS_LIB)
 LAPACK_LIB = os.environ.get("DSDP_LAPACK_LIB", LAPACK_LIB)

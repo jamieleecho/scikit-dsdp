@@ -4,7 +4,7 @@
 
 """Sanity test for scikit-dsdp module"""
 
-from pydsdp.dsdp5 import *
+from pydsdp.dsdp5 import dsdp, dsdp_readsdpa
 from numpy import matrix
 import os
 
@@ -28,7 +28,7 @@ def test_dsdp():
     OPTIONS = {}
     OPTIONS["print"] = 0
 
-    result = dsdp(A, b, c, K, OPTIONS)
+    dsdp(A, b, c, K, OPTIONS)
 
 
 def test_control1():

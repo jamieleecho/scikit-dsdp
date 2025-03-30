@@ -2,8 +2,8 @@
 
 __all__ = ["dsdp", "dsdp_readsdpa"]
 
-from pydsdp.convert import *
-from numpy import *
+from pydsdp.convert import sedumi2sdpa
+from numpy import array, matrix, reshape
 from pydsdp.pydsdp5 import pyreadsdpa
 from os import remove, path
 from tempfile import NamedTemporaryFile

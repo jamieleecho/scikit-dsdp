@@ -39,8 +39,10 @@ jobs:
         run: |
           curl -L -o blas.lib https://icl.utk.edu/lapack-for-windows/libraries/VisualStudio/3.5.0/Static-INTEL/Win64/BLAS.lib;
           curl -L -o lapack.lib https://icl.utk.edu/lapack-for-windows/libraries/VisualStudio/3.5.0/Static-INTEL/Win64/LAPACK.lib;
-          echo "LIB="%cd% >> %GITHUB_PATH%;
-          echo "LIB="%cd%;
+          echo $env:GENERATOR_PLATFORM
+          echo LIB=$PWD >> $env:GENERATOR_PLATFORM;
+          echo $PWD;
+          echo LIB=$PWD;
 
       - uses: actions/checkout@master
 

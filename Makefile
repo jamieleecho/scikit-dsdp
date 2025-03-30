@@ -29,7 +29,7 @@ check-lock:
 	uv lock --locked
 
 clean:
-	rm -rf .ruff_cache .venv build .cache *.egg-info
+	rm -rf .ruff_cache .venv build .cache *.egg-info dist
 
 fix-all: fix-format fix-lint lock
 

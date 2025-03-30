@@ -60,7 +60,6 @@ if BUILD_DSDP:
 # Setup
 
 setup(
-    name="scikit-dsdp",
     url="http://www.mcs.anl.gov/hs/software/DSDP/",
     ext_package="pydsdp",
     ext_modules=extmods,

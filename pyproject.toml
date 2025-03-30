@@ -6,7 +6,7 @@ authors = [
   {name = "Yinyu Ye", email = "yyye@stanford.edu"},
 ]
 description = "Python interface to DSDP semidefinite programming library"
-readme = "README"
+readme = {file = "README", content-type = "text/plain"}
 license = "GPL-3.0-or-later"
 requires-python = ">= 3.6"
 dependencies = [

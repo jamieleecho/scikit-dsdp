@@ -38,7 +38,7 @@ jobs:
       - name:  Install requirements (Windows)
         if: matrix.os == 'windows-latest'
         run: |
-          choco install blas lapack
+          choco install libblas-dev liblapack-dev
 
       - name: Install uv
         uses: astral-sh/setup-uv@v5

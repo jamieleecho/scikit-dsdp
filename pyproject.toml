@@ -1,5 +1,5 @@
 [project]
-name = "jlc-scikit-dsdp"
+name = "scikit-dsdp"
 version = "0.0.1"
 authors = [
   {name = "Zhisu Zhu", email = "zhuzhisu@alumni.stanford.edu"},

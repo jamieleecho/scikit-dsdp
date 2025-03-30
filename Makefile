@@ -18,7 +18,7 @@
 default: check-all run-tests
 
 build-dist:
-	uv build --verbose
+	uv build --verbose --sdist
 
 check-all: check-lint check-lock
 

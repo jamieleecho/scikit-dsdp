@@ -30,6 +30,7 @@ dev = [
 requires = [
   "cython>=0.29.21",
   "numpy>=1.19.0",
+  "ruff",
   "setuptools",
   "scipy",
   "wheel",

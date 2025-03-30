@@ -56,12 +56,6 @@ if BUILD_DSDP:
 # Setup
 
 setup (name = 'scikit-dsdp', 
-    description = 'Python interface to DSDP semidefinite programming library',
-    version = '0.0.1', 
-    long_description = '''
-Python interface to DSDP semidefinite programming library.''', 
-    author = 'Zhisu Zhu, and Yinyu Ye',
-    author_email = 'zhuzhisu@alumni.stanford.edu, yyye@stanford.edu',
     url = 'http://www.mcs.anl.gov/hs/software/DSDP/',
     license = 'GNU GPL version 3',
     ext_package = "pydsdp",

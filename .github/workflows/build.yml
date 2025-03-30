@@ -48,14 +48,18 @@ jobs:
 
       - name: Set up Python
         run: |
+          uv
           uv venv -p ${{ matrix.python-version }}
+          rm .python-version
 
       - name: Install Requirements
         run: |
+          env
           make sync
 
       - name: Verify the distribution can be built
         run: |
+          env
           make build-dist
 
       - name: Run tests

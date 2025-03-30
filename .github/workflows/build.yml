@@ -37,8 +37,11 @@ jobs:
       - name:  Install requirements (Windows)
         if: matrix.os == 'windows-latest'
         run: |
-          curl -L -o openblas.zip https://github.com/OpenMathLib/OpenBLAS/releases/download/v0.3.23/openblas-0.3.23-win64.zip
-          unzip openblas.zip -o openblas
+          curl -L -o openblas.zip https://github.com/OpenMathLib/OpenBLAS/releases/download/v0.3.29/OpenBLAS-0.3.29_x64.zip
+          mkdir openblas
+          cd openblas
+          unzip ../openblas.zip
+          cd ..
           echo "OPENBLAS_PATH=$(pwd)/openblas" >> $GITHUB_ENV
           echo "PATH=$(pwd)/openblas/lib;$PATH" >> $GITHUB_PATH
 

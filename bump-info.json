@@ -11,6 +11,6 @@
       "bump": "minor",
       "branch": "main",
       "reset": "build",
-      "tag": true
+      "tag": false
   }]
 }

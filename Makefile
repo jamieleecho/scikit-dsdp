@@ -56,7 +56,7 @@ lock:
 	uv lock
 
 run-tests: check-lock
-	uv run python -m unittest discover -v -s ./choldate -p *test*.py
+	uv run pytest .
 
 sync: check-lock
 	uv sync --no-install-workspace

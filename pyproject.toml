@@ -20,6 +20,10 @@ Homepage = "http://www.mcs.anl.gov/hs/software/DSDP/"
 Repository = "https://github.com/zhisu/scikit-dsdp"
 Issues = "https://github.com/zhisu/scikit-dsdp/issues"
 
+[tool.setuptools.packages.find]
+where = ["."]
+exclude = ["tests"]
+
 [dependency-groups]
 dev = [
   "pytest",

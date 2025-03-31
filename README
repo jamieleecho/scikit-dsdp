@@ -69,9 +69,8 @@ or if you have write privileges::
   git clone git@github.com:zhisu/scikit-dsdp.git
 
 cd scikit-dsdp
-make sync
 make install-pre-commit
-make
+make install
 
 Testing
 -------
@@ -82,10 +81,11 @@ Misc
 -------
 
 The Makefile makes it easy to perform the most common operations:
-* make check-all # will run linting and uv.lock checks
-* make check-lint # will run check the linting
-* make check-lock # will verify the uv.lock is aligned to pyproject.toml
+* make check-all # runs linting and uv.lock checks
+* make check-lint # checks for linting issues
+* make check-lock # verifies the uv.lock is aligned to pyproject.toml
 * make clean # cleans the virtual environment and caches
+* make default # runs a default set of checks on the code
 * make fix-all # formats the code, fixes lint errors and runs locks uv.lock to pyproject.toml
 * make fix-format # formats the code
 * make fix-lint # fixes linting issues

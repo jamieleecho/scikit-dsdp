@@ -113,3 +113,14 @@ Releases are made from the main branch.
 2. Be sure that the main branch is selected and press Run workflow
 3. This will automatically create a new tag and publish to pypi
 4. A new release will be present https://github.com/zhisu/scikit-dsdp/releases that you can then fill out and publish.
+
+
+Important Notes
+===============
+
+This modules was originally developed by zhisu and the original repo can be found at
+https://github.com/zhisu/scikit-dsdp
+
+This fork is being maintained by jamieleecho.
+
+THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.

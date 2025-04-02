@@ -115,8 +115,8 @@ Releases are made from the main branch.
 4. A new release will be present https://github.com/zhisu/scikit-dsdp/releases that you can then fill out and publish.
 
 
-Important Notes
-===============
+Important Note
+==============
 
 This modules was originally developed by zhisu and the original repo can be found at
 https://github.com/zhisu/scikit-dsdp

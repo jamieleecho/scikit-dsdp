@@ -60,9 +60,6 @@ if BUILD_DSDP:
 # Setup
 
 setup(
-    url="http://www.mcs.anl.gov/hs/software/DSDP/",
     ext_package="pydsdp",
     ext_modules=extmods,
-    package_dir={"pydsdp": "dsdp/python"},
-    packages=["pydsdp"],
 )

@@ -20,9 +20,8 @@ Homepage = "http://www.mcs.anl.gov/hs/software/DSDP/"
 Repository = "https://github.com/zhisu/scikit-dsdp"
 Issues = "https://github.com/zhisu/scikit-dsdp/issues"
 
-[tool.setuptools.packages.find]
-where = ["."]
-exclude = ["tests"]
+[tool.setuptools]
+package-dir = {"pydsdp" = "dsdp/python"}
 
 [dependency-groups]
 dev = [
@@ -39,6 +38,7 @@ requires = [
   "scipy",
   "wheel",
 ]
+build-backend = "setuptools.build_meta"
 
 [tool.pytest.ini_options]
 rootdir = "."

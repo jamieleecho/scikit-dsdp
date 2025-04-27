@@ -4,9 +4,10 @@
 
 """Sanity test for scikit-dsdp module"""
 
-from pydsdp.dsdp5 import dsdp, dsdp_readsdpa
-from numpy import matrix
 import os
+
+from numpy import matrix
+from pydsdp.dsdp5 import dsdp, dsdp_readsdpa
 
 tol = 0.000001
 target = dict(

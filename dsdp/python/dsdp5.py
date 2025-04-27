@@ -2,11 +2,12 @@
 
 __all__ = ["dsdp", "dsdp_readsdpa"]
 
-from pydsdp.convert import sedumi2sdpa
-from numpy import array, matrix, reshape
-from pydsdp.pydsdp5 import pyreadsdpa
-from os import remove, path
+from os import path, remove
 from tempfile import NamedTemporaryFile
+
+from numpy import array, matrix, reshape
+from pydsdp.convert import sedumi2sdpa
+from pydsdp.pydsdp5 import pyreadsdpa
 
 
 def dsdp(A, b, c, K, OPTIONS={}):
